@@ -7,13 +7,13 @@ def read_langs():
 
     eng_index2word = {0: "SOS", 1: "EOS"}
     fra_index2word = {}
-    with open("Langs/eng_word2index.txt") as f:
+    with open("Langs/eng.txt") as f:
         for word in f.readlines():
             key, val = word.strip().split(":")
             eng_word2index[key] = int(val)
             eng_index2word[int(val)] = key
 
-    with open("Langs/fra_word2index.txt") as f:
+    with open("Langs/fra.txt") as f:
         for word in f.readlines():
             key, val = word.strip().split(":")
             fra_word2index[key] = int(val)
